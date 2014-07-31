@@ -1,0 +1,49 @@
+<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ path('site_admin') }}" id="logo"><img class="img-responsive" src="{{ asset('images/logo.png') }}" /></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{ path('site_admin') }}"><span class="glyphicon glyphicon-home"></span> Tableau de bord</a></li>
+          <li><a href="#">Help</a></li>
+          {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                    <img class="img-circle" src="{{ asset('images/profil-users.jpg') }}" alt="Image Utilisateur">
+                    <span>{{ app.user.username }}</span>
+                    <i class="menu-dropdown fa fa-angle-down"></i>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profile</a></li>
+                    <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Account</a></li>
+                    <li><a href="#"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Déconnexion</a></li>
+                  </ul>
+                </li>
+                {% else %}{% endif %}
+          <!-- <li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <ul style="margin-top: 12px;">
+                <div class="btn-group open">
+                  <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> {{ app.user.username }}</a>
+                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class="fa fa-caret-down"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{{ path('fos_user_profile_edit') }}"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+                    li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Supprimer</a></li>
+                    <li><a href="#"><i class="fa fa-ban fa-fw"></i> Ban</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
+                  </ul>
+                </div>
+            </ul>
+            {% else %}
+              <a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-off"></span> Connexion</a>
+            {% endif %}
+          </li>-->
+        </ul>
+      </div>
+    </div>
+</header>

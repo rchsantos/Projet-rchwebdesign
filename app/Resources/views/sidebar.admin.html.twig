@@ -1,0 +1,72 @@
+<div id="menu-sidebar" class="fixed">
+  <div class="nav nav-sidebar">
+    <div id="main-menu" role="navigation">
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+      <div class="menu-content">
+        <img class="img-circle pull-left" src="{{ asset('images/profil-users.jpg') }}" alt="Image Utilisateur">
+        <div class="text-bg pull-right ">
+          <span class="text-slim">Bienvenue,</span>
+          <span class="text-semibold">{{ app.user.username }}</span>
+        </div>
+      </div>
+      {% else %}{% endif %}
+      <ul class="navigation">
+        <li>
+          <a href="{{ path('site_admin') }}"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Tableau de bord</span></a>
+        </li>
+        <li>
+          <a href="{{ path('site_admin_articles') }}" class=""></b><i class="menu-icon glyphicon glyphicon-pushpin"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Articles</span></a>
+          <i class="menu-dropdown fa fa-angle-down"></i>
+          <!-- <ul class="dropdown-menu">
+            <li><a href="{{ path('site_admin_articles') }}">Tous les articles</a></li>
+            <li><a href="{{ path('site_admin_ajouter') }}"><i class="menu-icon fa fa-plus"></i>Ajouter</a></li>
+            <li><a href="{{ path('site_admin_ajouter') }}">Catégories</a></li>
+          </ul> -->
+        </li>
+        <li>
+          <a href="{{ path('site_admin_media') }}"><i class="menu-icon glyphicon glyphicon-picture"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Médias</span></a>
+        </li>
+        <li>
+          <a href="{{ path('site_admin') }}"><i class="menu-icon glyphicon glyphicon-file"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Pages</span></a>
+        </li>
+        <li>
+          <a href="{{ path('site_admin_users') }}"><i class="menu-icon fa fa-users"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Utilisateurs</span></a>
+        </li>
+        <li>
+          <a href="{{ path('site_admin') }}"><i class="menu-icon glyphicon glyphicon-calendar"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Calendrier</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+     
+      
+        
+   
+<!--
+<ul class="nav nav-sidebar">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Administration</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="nav nav-sidebar">
+          <li><a href="{{ path('site_admin_users') }}"><span class="glyphicon glyphicon-user"></span> Utilisateurs</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Analytics</a></li>
+          <li><a href="#">Export</a></li>
+      </ul>
+    </div>
+    <div class="panel-heading">
+      <h3 class="panel-title">Contenu</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="nav nav-sidebar">
+          <li><a href="{{ path('site_admin_articles') }}"><span class="glyphicon glyphicon-list-alt"></span> Articles</a></li>
+          <li><a href="{{ path('site_admin_categories') }}"><span class="glyphicon glyphicon-folder-open"></span> Categories</a></li>
+          <li><a href=""><span class="glyphicon glyphicon-film"></span> Videos</a></li>
+          <li><a href="">Another nav item</a></li>
+      </ul>
+  </div>
+</ul>-->

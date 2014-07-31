@@ -1,0 +1,42 @@
+/*@font-face {
+    font-family: "JosefinSlabBold";
+    font-weight: bold;
+    font-style:  normal;
+    src: url('web/font/josefinslab-bold-webfont.eot');
+    src: url('web/font/josefinslab-bold-webfont.eot?#iefix') format('eot'),
+     	 url('http://www.rchwebdesign.ch/web/font/josefinslab-bold-webfont.ttf') format('truetype'),
+	 	 url('http://www.rchwebdesign.ch/web/font/josefinslab-bold-webfont.woff') format('woff'),
+	 	 url('http://www.rchwebdesign.ch/web/font/josefinslab-bold-webfont.svgJosefinSlabBold') format('svg');
+    
+}
+@font-face {
+    font-family: "JosefinSlabThin";
+    font-weight: normal;
+    font-style:  normal;
+    src: url('http://www.rchwebdesign.ch/web/font/josefinslab-thin-webfont.eot');
+    src: url('http://www.rchwebdesign.ch/web/font/josefinslab-thin-webfont.eot?#iefix') format('eot'),
+     	 url('http://www.rchwebdesign.ch/web/font/josefinslab-thin-webfont.ttf') format('truetype'),
+	 	 url('http://www.rchwebdesign.ch/web/font/josefinslab-thin-webfont.woff') format('woff'),
+	 	 url('http://www.rchwebdesign.ch/web/font/josefinslab-thin-webfont.svgJosefinSlabThin') format('svg');
+
+}
+
+@font-face {
+    font-family: "StMarie";
+    font-style:  normal;
+    src: url('http://www.rchwebdesign.ch/web/font/stmarie-thin-webfont.eot');
+    src: url('http://www.rchwebdesign.ch/web/font/stmarie-thin-webfont.eot?#iefix') format('eot'),
+     	 url('http://www.rchwebdesign.ch/web/font/stmarie-thin-webfont.ttf') format('truetype'),
+	 	 url('http://www.rchwebdesign.ch/web/font/stmarie-thin-webfont.woff') format('woff'),
+	 	 url('http://www.rchwebdesign.ch/web/font/stmarie-thin-webfont.svgStMarie') format('svg');
+}
+*/
+@font-face {
+    font-family: "SourceSansPro";
+    font-style:  normal;
+    src: url('/web/font/sourcesanspro-regular-webfont.eot');
+    src: url('/web/font/sourcesanspro-regular-webfont.eot?#iefix') format('eot'),
+     	 url('/web/font/sourcesanspro-regular-webfont.ttf') format('truetype'),
+	 	 url('/web/font/sourcesanspro-regular-webfont.woff') format('woff'),
+	 	 url('/web/font/sourcesanspro-regular-webfont.svg#SourceSansPro') format('svg');
+}

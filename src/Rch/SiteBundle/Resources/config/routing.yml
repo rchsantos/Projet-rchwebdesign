@@ -1,0 +1,35 @@
+site_homepage:
+    pattern:  /
+    defaults: { _controller: SiteBundle:Site:index }
+
+site_admin:
+    pattern: /admin
+    defaults: { _controller: SiteBundle:Site:admin }
+
+site_admin_articles:
+    pattern: /admin/articles
+    defaults: { _controller: SiteBundle:Site:articles }
+
+site_admin_ajouter:
+    pattern: /admin/ajouter
+    defaults: { _controller: SiteBundle:Site:ajouter }
+
+site_admin_editer:
+    pattern: /admin/editer/{id}
+    defaults: { _controller: SiteBundle:Site:editer }
+    requirements:
+        id: \d+
+
+site_admin_supprimer:
+    pattern: /admin/supprimer/{id}
+    defaults: { _controller: SiteBundle:Site:supprimer }
+    requirements:
+        id: \d+
+
+site_admin_categories:
+    pattern: /admin/categories
+    defaults: { _controller: SiteBundle:Site:categories }
+
+site_admin_media:
+    pattern: /admin/medias
+    defaults: { _controller: SiteBundle:Site:medias }

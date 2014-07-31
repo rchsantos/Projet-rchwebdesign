@@ -1,0 +1,38 @@
+{% extends '::admin.html.twig' %}
+
+{% block body %}
+
+<div class="page-header">
+  <h2 class="sub-header">Liste categories</h2>
+  <a href="{{ path('site_admin_ajouter') }}"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus"></span> Nouveau</button></a>
+  <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span> Recherche</button>
+</div>
+<div class="table-responsive">
+    <table class="table table-striped">
+    	<thead>
+    		<tr>
+    		  <th>id</th>
+              <th>Nom</th>
+              <th>Créer par</th>
+              <th>Date création</th>
+              <!--<th>Header</th>-->
+    		</tr>
+    	<thead>
+		    	<tbody>
+		    		<td>teste 1</td>
+		    		<td>teste 2</td>
+		    		<td>teste 3</td>
+		    		<td>teste 4</td>
+		    		<td>
+		    			<button type="button" class="btn btn-default btn-sm">
+						  <span class="fa fa-pencil fa-fw"></span> Éditer
+						</button>
+						<button type="button" class="btn btn-default btn-sm">
+						  <span class="glyphicon glyphicon-trash"></span> Supprimer
+						</button>
+		    		</td>
+		    	</tbody>                      
+    </table>
+</div>
+
+{% endblock%}

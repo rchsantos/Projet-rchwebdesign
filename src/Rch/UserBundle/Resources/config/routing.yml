@@ -1,0 +1,19 @@
+site_admin_users:
+    pattern: /admin/utilisateurs
+    defaults: { _controller: UserBundle:Default:userlist }
+
+site_admin_users_ajouter:
+    pattern: /admin/utilisateurs/ajouter
+    defaults: { _controller: FOSUserBundle:Registration:register }
+
+site_admin_users_editer:
+    pattern: /admin/utilisateurs/editer/{id}
+    defaults: { _controller: UserBundle:Default:userediter }
+    requirements:
+        id: \d+
+
+site_admin_users_supprimer:
+    pattern: /admin/utilisateurs/supprimer/{id}
+    defaults: { _controller: UserBundle:Default:usersupprimer }
+    requirements:
+        id: \d+

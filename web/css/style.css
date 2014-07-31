@@ -1,0 +1,46 @@
+body {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	font-family: "SourceSansPro";
+	line-height: 1.6em;
+	color: #4f4f4f;
+	text-align: center;
+	background: url(/web/images/bg_trame.png) repeat rgb(243,242,237);
+}
+#nav-header {
+	text-transform: uppercase;
+}
+.navbar-default{
+	background: rgb(243,242,237);
+}
+#logo {
+	position: relative;
+	left: 70%;	
+}
+#lineleft {
+	border-bottom: solid rgb(100,12,53) 1px;
+	width: 150%;
+	right: 0%;
+	position: absolute;
+}
+#lineright {
+	border-bottom: solid rgb(100,12,53) 1px;
+	width: 150%;
+	left: 0;
+	position: absolute;
+}
+
+/*************	Responsive	***************/
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 767px) { 
+	#logo {
+		left: -70%;
+		top: -50px;
+	}
+	.navbar-default{
+		background-color: rgb(243,242,237);
+	}
+}
+/*************	/Responsive	***************/

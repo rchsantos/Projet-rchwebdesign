@@ -1,0 +1,39 @@
+{% extends "::admin.html.twig" %}
+
+{% block body %}
+<ul class="breadcrumb breadcrumb-page">
+    <div class="breadcrumb-label text-light-gray">Vous êtes ici: </div>
+    <li><a href="{{ path('site_admin') }}">Accueil</a></li>
+    <li><a href="{{ path('site_admin_users') }}">Article</a></li>
+    <li class="active"><a href="{{ path('site_admin_articles') }}">Ajouter article</a></li>
+</ul>
+<div class="page-header"><h2><span class="fa fa-file"></span> Ajouter un nouvel article</h2></div>
+
+<form actions="{{ path('site_admin_ajouter') }}" method="post" role="form" {{ form_enctype(form) }}>
+	<div class="form-group">
+		{{ form_label(form.titre) }}
+		<div class="controls">
+			{{ form_widget(form.titre, { 'attr': {'class': 'form-control',  'placeholder': 'Saisissez votre titre ici' } }) }}	
+		</div>
+		
+	</div>
+
+	<div class="form-group">
+		{{ form_label(form.contenu) }}
+		{{ form_widget(form.contenu, { 'attr': {'class': 'tinymce'} }) }}
+	</div>
+
+	<div class="form-group">
+		{{ form_label(form.image, 'Ajouter media') }}
+		{{ form_widget(form.image) }}
+	</div>
+	<br>
+	
+	
+    <button type="submit" class="btn btn-default">Publier</button>
+    
+</form>
+<!-- Ajout script TinyMCE : en bas de page -->
+{% block javascripts %}{{ tinymce_init() }}{% endblock %}
+{% endblock%}
+
